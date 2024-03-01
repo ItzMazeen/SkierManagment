@@ -7,8 +7,8 @@ import java.util.List;
 public interface ISkierService {
     Skier addSkier(Skier skier);
     Skier upadateSkier(Skier skier);
-    void removeSkier(Long Idskier);
-    Skier retrieveSkier(Long Idskier);
+    void removeSkier(Long IdSkier);
+    Skier retrieveSkier(Long IdSkier);
     List<Skier> retrieveAllSkiers();
 
 

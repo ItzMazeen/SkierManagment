@@ -23,13 +23,13 @@ public class SkierServiceImpl implements ISkierService{
     }
 
     @Override
-    public void removeSkier(Long Idskier) {
-        skierRepository.deleteById(Idskier);
+    public void removeSkier(Long IdSkier) {
+        skierRepository.deleteById(IdSkier);
     }
 
     @Override
-    public Skier retrieveSkier(Long Idskier) {
-        return skierRepository.findById(Idskier).get();
+    public Skier retrieveSkier(Long IdSkier) {
+        return skierRepository.findById(IdSkier).get();
     }
 
     @Override

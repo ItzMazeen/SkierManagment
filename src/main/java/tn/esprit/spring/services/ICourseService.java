@@ -8,8 +8,8 @@ import java.util.List;
 public interface ICourseService {
     Course addCourse(Course Course);
     Course upadateCourse(Course Course);
-    void removeCourse(Long Idcourse);
-    Course retrieveCourse(Long Idcourse);
+    void removeCourse(Long IdCourse);
+    Course retrieveCourse(Long IdCourse);
     List<Course> retrieveAllCourses();
 
 }

@@ -16,12 +16,12 @@ public class CourseServiceImpl implements ICourseService{
     }
 
     @Override
-    public void removeCourse(Long Idcourse) {
+    public void removeCourse(Long IdCourse) {
 
     }
 
     @Override
-    public Course retrieveCourse(Long Idcourse) {
+    public Course retrieveCourse(Long IdCourse) {
         return null;
     }
 
