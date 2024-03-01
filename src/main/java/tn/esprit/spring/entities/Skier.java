@@ -33,6 +33,9 @@ public class Skier implements Serializable {
 
     @OneToMany(mappedBy = "skier",cascade = CascadeType.ALL)
     private Set<Registration> registrations;
+
+    @OneToOne
+    private Subscription subscription;
     
 
 }

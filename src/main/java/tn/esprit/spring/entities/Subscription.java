@@ -32,11 +32,5 @@ public class Subscription implements Serializable {
 
 
 
-    @ManyToOne
-    private Skier skier;
-
-    @ManyToOne
-    private Course course;
-
 
 }
