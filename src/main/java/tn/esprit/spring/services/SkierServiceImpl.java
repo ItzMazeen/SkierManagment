@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import tn.esprit.spring.entities.Skier;
 import tn.esprit.spring.repositories.SkierRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -36,4 +37,11 @@ public class SkierServiceImpl implements ISkierService{
     public List<Skier> retrieveAllSkiers() {
         return skierRepository.findAll();
     }
+
+    @Override
+    public List<Skier> addListSkier(List<Skier> skieurs) {
+        return skierRepository.saveAll(skieurs);
+    }
+
+
 }

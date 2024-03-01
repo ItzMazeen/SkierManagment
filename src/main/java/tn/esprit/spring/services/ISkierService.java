@@ -10,6 +10,7 @@ public interface ISkierService {
     void removeSkier(Long IdSkier);
     Skier retrieveSkier(Long IdSkier);
     List<Skier> retrieveAllSkiers();
+    List<Skier> addListSkier(List<Skier> skieurs);
 
 
 
