@@ -1,4 +1,5 @@
 package tn.esprit.spring.entities;
+import java.time.LocalDate;
 import java.util.Set;
 
 import jakarta.persistence.*;
@@ -25,7 +26,7 @@ public class Skier implements Serializable {
     private Long numPiste;
     private String firstName;
     private String lastName;
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
     private String city;
 
     @ManyToMany

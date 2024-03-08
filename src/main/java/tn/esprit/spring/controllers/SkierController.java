@@ -1,17 +1,20 @@
 package tn.esprit.spring.controllers;
 
 import lombok.AllArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 import tn.esprit.spring.entities.Skier;
 import tn.esprit.spring.services.ISkierService;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @RestController
 @AllArgsConstructor
 @RequestMapping("api/skiers")
 public class SkierController {
-    ISkierService skierService;
+    ISkierService skierService; //injection des dépendances
 
     @GetMapping("/getAllSkiers")
     public List<Skier> getAllSkiers() {
@@ -36,4 +39,8 @@ public class SkierController {
         return skierService.addListSkier(skiers);
     }
 
+    @GetMapping("/skieurByDtae/{datedeb}/{datefin}")
+    public List<Skier> skieursByDate (@PathVariable LocalDate datedeb, @PathVariable LocalDate datefin){
+        return  skierService.listSkieurBydate(datedeb,datefin);
+    }
 }

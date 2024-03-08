@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import tn.esprit.spring.entities.Skier;
 import tn.esprit.spring.repositories.SkierRepository;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -43,5 +43,9 @@ public class SkierServiceImpl implements ISkierService{
         return skierRepository.saveAll(skieurs);
     }
 
+    @Override
+    public List<Skier> listSkieurBydate(LocalDate datedeb, LocalDate datefin) {
+        return skierRepository.findByDateOfBirthBetween(datedeb, datefin);
+    }
 
 }
